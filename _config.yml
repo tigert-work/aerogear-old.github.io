@@ -14,18 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tendrl
-email: tendrl@tendrl.org
+#email: none
 description: > # this means to ignore newlines until "baseurl:"
-  Tendrl is an open source Software Defined Storage controller that is 
-  designed to manage today’s and tomorrow’s SDS technologies. It provides
-  for installation, storage provisioning, lifecycle management, monitoring,
-  alerting, trending, and analytics for Ceph and Gluster storage, while
-  providing a framework to encompass other SDS technologies in the future.
+  The Aerogear Project provides flexible, extensible libraries and
+  integrated server-side components that will simplify your mobile
+  development and infrastructure setup across multiple mobile
+  platforms.
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://example.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 #github_username:  jekyll
-repository: tigertlabs/tendrl-jekyll
+repository: tigertlabs/aerogear-site
 
 permalink: blog/:year/:month/:slug/
 paginate: 10
