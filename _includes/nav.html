@@ -1,0 +1,34 @@
+{% assign navs = include.nav | default: site.data.navigation %}
+
+{% unless include.wrap == false %}
+  <nav role="{{ include.role }}" class="{{ include.class }}">
+{% endunless %}
+
+  <ul>
+
+    {% for nav in navs %}
+      {% if nav.url == page.url | replace: ".html", "/" %}
+        {% assign active = " active" %}
+      {% elsif nav.url == page.url | remove: ".html" %}
+        {% assign active = " active" %}
+      {% else %}
+        {% assign active = "" %}
+      {% endif %}
+
+      <li class="{{nav.class}} nav.url-{{ nav.url | slugify | default: "home" }}{{ active }}" role="menuitem">
+        {% if nav.url %}
+          <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.title }}</a>
+        {% else %}
+          <span>{{ nav.title }}</span>
+        {% endif %}
+        {% if nav.nav %}
+          {% include nav.html nav=nav.nav wrap=false %}
+        {% endif %}
+      </li>
+    {% endfor %}
+
+  </ul>
+
+{% unless include.wrap == false %}
+  </nav>
+{% endunless %}
