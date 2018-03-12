@@ -3,13 +3,22 @@ layout: default
 title: AeroGear Push
 ---
 
-<h1>AeroGear Push Module</h1>
+<h1>AeroGear Push</h1>
 
 <p><big>Send push notifications to any device, regardless of platform or network.</big></p>
 
-<p>The push module consists of the AeroGear Unified Push Server which sends native messages to different mobile devices.</p>
+<p>AeroGear has support for different push notification technologies:</p>
 
-<p>In addition to the Unified Push Server there are two additional backend modules: SimplePush Server that uses WebSockets, intended for WebOS, but due to its light weight would also work for small devices like Internet of Things applications. </p>
+<h2>UnifiedPush Server</h2>
 
-<p>There is also work underway to implement a server based on the HTTP2 WebPush specification, which will likely be the successor of SimplePush service in the future.</p>
+<p>The AeroGear UnifiedPush Server sends native push messages to different mobile operating systems, such as Android, iOS, Windows or Firefox OS/SimplePush.</p>
+
+<h2>SimplePush Server</h2>
+
+<p>Our SimplePush Server represents an implementation of Mozilla's SimplePush, which is based on top of WebSocket. It was created for Push Notifications delivery on FirefoxOS, but it can also be used for different use cases, like Internet-of-Things applications.</p>
+
+<h2>WebPush Server</h2>
+
+<p>The <a href="https://tools.ietf.org/html/draft-thomson-webpush-http2">WebPush Specification</a> is based on HTTP2 and is currently in an early state. The AeroGear team sees it as the successor of SimplePush.</p>
+
 
