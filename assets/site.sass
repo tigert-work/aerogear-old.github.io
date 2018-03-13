@@ -42,13 +42,16 @@ h1, h2, h3, h4, h5, h6, nav a
   color: $grey-color-dark
 
 header.masthead
-  background: rgba(#193d62, 1)
-
+  background: rgba(#193d62, 0.5)
+  background: radial-gradient(ellipse at top, rgba(#3465a4, 0.6), transparent), radial-gradient(ellipse at bottom, rgba(#001129, 1.0), transparent)
   #logo
     text-align: center
     margin-left: auto
     margin-right: auto
-    margin: $gl-gutter
+    margin: $gl-gutter/2
+    margin-bottom: 0
+    img
+      height: 98px
     
   .hgroup,
   nav > ul
@@ -56,7 +59,8 @@ header.masthead
     font-size: 110%
 
   nav
-    background: rgba(#000000, 0.1)
+    background: rgba(#000, 0.15)
+    padding-top: 3px
 
     > ul
       @extend .grid
@@ -70,13 +74,13 @@ header.masthead
         > a
           display: block
           padding: 0 1em
-          transition: all 0.15s
-          -moz-transition: all 0.15s
-          -webkit-transition: all 0.15s
+          transition: all 0.5s
+          -moz-transition: all 0.5s
+          -webkit-transition: all 0.5s
 
         &.active
           a
-            background: linear-gradient(to top, #fff 3px, rgba(#fff,0.1) 2px, transparent 90%)
+            background: linear-gradient(to top, rgba(#e66465, 1.0) 0px, rgba(#e66465, 1.0) 4px, transparent 4px)
 
     a
       &:link, &:visited, &:active
@@ -102,6 +106,14 @@ article
     max-width: 100%
     height: auto
     
+.hilight
+  background: rgba(#ffffff, 0.32)
+  padding: $gl-gutter/2
+  margin: -$gl-gutter/2
+  margin-top: 0
+  @media (min-width: 48em)	
+    border-radius: 7px
+
 #footer
   padding-top: 4rem
   padding-bottom: 4rem
