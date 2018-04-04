@@ -1,16 +1,28 @@
 <header class="masthead hidden-print" id="branding" role="banner">
   <div class="wrapper">
     <div class="grid">
-      <div id="logo" class="col">
-        <a href="/"><img class="logo is-svg" alt="{{ site.title }}" src="{{ "/images/logo.svg" | prepend: site.baseurl }}"></a>
+      {% if page.url == "/" %}
+
+        <div id="logo" class="col col-12">
+          <a href="/"><img class="logo is-svg" alt="{{ site.title }}" src="{{ "/images/logo.svg" | prepend: site.baseurl }}"></a>
+        </div>
+        <div class="navigation col col-12">
+
+      {% else %}
+
+        <div id="logo" class="col col-2_xs-12">
+          <a href="/"><img class="logo is-svg" alt="{{ site.title }}" src="{{ "/images/logo.svg" | prepend: site.baseurl }}"></a>
+        </div>
+        <div class="navigation col col-10_xs-12">
+
+      {% endif %}
+
+      {% if site.data.navigation %}
+        <div class="nav-wrap">
+          {% include nav.html role="navigation" %}
+        </div>
+      {% endif %}
       </div>
     </div>
-  </div>
-  <div class="navigation">
-    {% if site.data.navigation %}
-    <div class="nav-wrap">
-      {% include nav.html role="navigation" %}
-    </div>
-    {% endif %}
   </div>
 </header>

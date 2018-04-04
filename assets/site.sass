@@ -44,26 +44,24 @@ h1, h2, h3, h4, h5, h6, nav a
   color: $grey-color-dark
 
 header.masthead
-  background: rgba(#193d62, 0.5)
-  background: radial-gradient(ellipse at top, rgba(#3465a4, 0.6), transparent), radial-gradient(ellipse at bottom, rgba(#001129, 1.0), transparent)
+  background: rgba(white, 0.2)
+  background: linear-gradient(to top, rgba(white, 0.2) 0, rgba(white, 0.1) 100% )
+  .col
+    padding-bottom: 0
+
   #logo
     text-align: center
-    margin-left: auto
-    margin-right: auto
-    margin: $gl-gutter/2
-    margin-bottom: 0
     img
-      height: 98px
+      padding-bottom: 3px
     
   .hgroup,
   nav > ul
     max-width: $content-width
     font-size: 110%
+    padding-top: 6px
 
   nav
-    background: rgba(#000, 0.15)
-    padding-top: 3px
-
+      
     > ul
       @extend .grid
       margin: 0 auto
@@ -107,6 +105,11 @@ article
   img
     max-width: 100%
     height: auto
+    
+
+.mission
+  .logo
+    text-align: center
     
 .hilight
   background: rgba(#ffffff, 0.32)
