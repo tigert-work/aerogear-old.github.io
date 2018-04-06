@@ -24,3 +24,5 @@ $on-laptop:        48em;
 {% else %}
   @import "default";
 {% endif %}
+
+@import "community";
